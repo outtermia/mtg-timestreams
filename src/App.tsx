@@ -38,7 +38,7 @@ const EVENTS = [
     ],
   },
   {
-    title: 'Event 2',
+    title: 'Evento 2',
     date: '2021-10-02',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     cards: [
