@@ -1,7 +1,7 @@
 import {
   Container,
   ImageList,
-} from '@mui/material';
+} from '@mui/material'
 import {
   Timeline,
   TimelineConnector,
@@ -10,7 +10,7 @@ import {
   TimelineItem,
   TimelineOppositeContent,
   TimelineSeparator,
-} from '@mui/lab';
+} from '@mui/lab'
 
 import CardTile from './CardTile'
 
@@ -54,7 +54,7 @@ const EVENTS = [
       },
     ],
   },
-];
+]
 
 const Event = ({ title, date, description, cards }: any) => {
   const CardTiles = cards.map((card: any) => <CardTile {...card} />)
@@ -80,7 +80,7 @@ const Event = ({ title, date, description, cards }: any) => {
 }
 
 function App() {
-  const events = EVENTS.map((event) => <Event {...event} />);
+  const events = EVENTS.map((event) => <Event {...event} />)
 
   return (
     <Container maxWidth="sm">
@@ -88,7 +88,7 @@ function App() {
         {events}
       </Timeline>
     </Container>
-  );
+  )
 }
 
-export default App;
+export default App
