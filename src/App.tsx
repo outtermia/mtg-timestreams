@@ -5,6 +5,7 @@ import {
   TimelineContent,
   TimelineDot,
   TimelineItem,
+  TimelineOppositeContent,
   TimelineSeparator,
 } from '@mui/lab';
 
@@ -23,14 +24,17 @@ const EVENTS = [
 
 const Event = ({ title, date, description }: any) => (
   <TimelineItem>
+    <TimelineOppositeContent>
+      <h3>{title}</h3>
+      <p>{date}</p>
+      <p>{description}</p>
+    </TimelineOppositeContent>
     <TimelineSeparator>
       <TimelineDot />
       <TimelineConnector />
     </TimelineSeparator>
     <TimelineContent>
-      <h3>{title}</h3>
-      <p>{date}</p>
-      <p>{description}</p>
+      {/* Cards related to the event will go here */}
     </TimelineContent>
   </TimelineItem>
 );
@@ -40,7 +44,7 @@ function App() {
 
   return (
     <Container maxWidth="sm">
-      <Timeline position="left">
+      <Timeline>
         {events}
       </Timeline>
     </Container>
