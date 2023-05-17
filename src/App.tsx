@@ -19,7 +19,7 @@ const EVENTS = [
     date: '2021-10-02',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
-]
+];
 
 const Event = ({ title, date, description }: any) => (
   <TimelineItem>
@@ -33,10 +33,10 @@ const Event = ({ title, date, description }: any) => (
       <p>{description}</p>
     </TimelineContent>
   </TimelineItem>
-)
+);
 
 function App() {
-  const events = EVENTS.map((event) => <Event {...event} />)
+  const events = EVENTS.map((event) => <Event {...event} />);
 
   return (
     <Container maxWidth="sm">
@@ -46,4 +46,5 @@ function App() {
     </Container>
   );
 }
+
 export default App;
