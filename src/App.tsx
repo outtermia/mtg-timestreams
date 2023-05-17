@@ -21,24 +21,34 @@ const EVENTS = [
   },
 ]
 
+const Event = ({ title, date, description }: any) => (
+  <TimelineItem>
+    <TimelineSeparator>
+      <TimelineDot />
+      <TimelineConnector />
+    </TimelineSeparator>
+    <TimelineContent>
+      <h3>{title}</h3>
+      <p>{date}</p>
+      <p>{description}</p>
+    </TimelineContent>
+  </TimelineItem>
+)
+
 function App() {
   return (
     <Container maxWidth="sm">
       <Timeline position="left">
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot color="secondary" />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>Secondary</TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot color="success" />
-          </TimelineSeparator>
-          <TimelineContent>Success</TimelineContent>
-        </TimelineItem>
+        <Event
+          title="Event 1"
+          date="2021-10-01"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <Event
+          title="Event 2"
+          date="2021-10-02"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
       </Timeline>
     </Container>
   );
