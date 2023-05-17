@@ -8,6 +8,19 @@ import {
   TimelineSeparator,
 } from '@mui/lab';
 
+const EVENTS = [
+  {
+    title: 'Event 1',
+    date: '2021-10-01',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    title: 'Event 2',
+    date: '2021-10-02',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+]
+
 function App() {
   return (
     <Container maxWidth="sm">
