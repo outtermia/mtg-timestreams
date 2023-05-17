@@ -36,19 +36,12 @@ const Event = ({ title, date, description }: any) => (
 )
 
 function App() {
+  const events = EVENTS.map((event) => <Event {...event} />)
+
   return (
     <Container maxWidth="sm">
       <Timeline position="left">
-        <Event
-          title="Event 1"
-          date="2021-10-01"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        />
-        <Event
-          title="Event 2"
-          date="2021-10-02"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        />
+        {events}
       </Timeline>
     </Container>
   );
