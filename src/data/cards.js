@@ -1,4 +1,4 @@
-import { get } from '../lib/request'
+import { get } from 'lib/request'
 
 export const getCard = async ({ code, number }) => {
   const response = await get(`/cards/${code}/${number}`)

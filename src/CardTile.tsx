@@ -10,7 +10,7 @@ import {
   Info as InfoIcon,
 } from '@mui/icons-material'
 
-import { getCard } from './data/cards'
+import { getCard } from 'data/cards'
 
 function CardTile({ owned, code, number, imageSize = 'normal' }: any) {
   const [card, setCard] = useState({} as any)
