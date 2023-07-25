@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   Container,
   ImageList,
@@ -81,6 +82,17 @@ const Event = ({ title, date, description, cards }: any) => {
 
 function App() {
   const events = EVENTS.map((event) => <Event {...event} />)
+
+  useEffect(() => {
+      const { NODE_ENV } = process.env
+
+      let pageTitle = document.title
+      if (NODE_ENV === 'development') {
+        pageTitle = `[DEV] MTG Time Streams`
+      }
+
+      document.title = pageTitle
+  }, [])
 
   return (
     <Container maxWidth="sm">
