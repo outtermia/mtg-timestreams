@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import theme from 'lib/theme'
 
 import HeroSection from 'HeroSection'
+import TimelineSection from 'TimelineSection'
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <HeroSection />
+
+      <TimelineSection />
     </ThemeProvider>
   )
 }
