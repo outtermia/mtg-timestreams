@@ -3,6 +3,7 @@ import {
   Container,
   ImageList,
 } from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
 import {
   Timeline,
   TimelineConnector,
@@ -13,7 +14,11 @@ import {
   TimelineSeparator,
 } from '@mui/lab'
 
+import theme from 'lib/theme'
+
+import HeroSection from 'HeroSection'
 import CardTile from './CardTile'
+
 
 const EVENTS = [
   {
@@ -95,11 +100,15 @@ function App() {
   }, [])
 
   return (
-    <Container maxWidth="sm">
-      <Timeline>
-        {events}
-      </Timeline>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <HeroSection />
+
+      <Container>
+        <Timeline>
+          {events}
+        </Timeline>
+      </Container>
+    </ThemeProvider>
   )
 }
 
