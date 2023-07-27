@@ -20,7 +20,7 @@ function CardTile({ owned, code, number, imageSize = 'normal' }: any) {
     getCard({ code, number })
       .then(setCard)
       .then(() => setLoading(false))
-  }, [])
+  }, [code, number])
 
   const {
     artist,
