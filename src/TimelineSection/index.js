@@ -23,18 +23,18 @@ const Event = ({ title, date, description, cards }: any) => {
   return (
     <TimelineItem>
       <TimelineOppositeContent>
-        <h3>{title}</h3>
-        <p>{date}</p>
-        {description.map((line) => <p>{line}</p>)}
+        <ImageList>
+          {CardTiles}
+        </ImageList>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <ImageList>
-          {CardTiles}
-        </ImageList>
+        <h3>{title}</h3>
+        <p>{date}</p>
+        {description.map((line) => <p>{line}</p>)}
       </TimelineContent>
     </TimelineItem>
   )
