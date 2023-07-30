@@ -4,6 +4,7 @@ import {
   Typography,
 } from '@mui/material'
 
+import { defaultSectionStyles } from 'lib/constants'
 
 import { HERO } from './content'
 
@@ -21,13 +22,6 @@ const sectionStyles = {
   //   lg: 60,
   //   xl: 116,
   // },
-  px: {
-    xs: 4,  // 0px
-    sm: 15, // 600px
-    md: 30, // 900px
-    lg: 46, // 1200px
-    xl: 25, // 1536px
-  },
   // py: {
   //   xs: 10,  // 0px
   //   sm: 15, // 600px
@@ -35,6 +29,7 @@ const sectionStyles = {
   //   lg: 20, // 1200px
   //   xl: 30, // 1536px
   // },
+  ...defaultSectionStyles,
 }
 
 

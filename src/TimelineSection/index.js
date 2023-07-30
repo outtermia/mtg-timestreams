@@ -40,18 +40,6 @@ const Event = ({ title, date, description, cards }: any) => {
   )
 }
 
-const sectionStyles = {
-  m: -1,
-  px: {
-    xs: 4,  // 0px
-    sm: 15, // 600px
-    md: 30, // 900px
-    lg: 46, // 1200px
-    xl: 50, // 1536px
-  },
-}
-
-
 function TimelineSection () {
   const events = EVENTS.map((event) => <Event {...event} />)
 
