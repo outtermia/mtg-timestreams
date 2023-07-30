@@ -1,5 +1,5 @@
 import {
-  Box,
+  Container,
   ImageList,
 } from '@mui/material'
 import {
@@ -56,14 +56,15 @@ function TimelineSection () {
   const events = EVENTS.map((event) => <Event {...event} />)
 
   return (
-    <Box
+    <Container
       id="timeline"
       component="section"
+      fixed
     >
       <Timeline>
         {events}
       </Timeline>
-    </Box>
+    </Container>
   )
 }
 

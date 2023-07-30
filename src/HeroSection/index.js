@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   Typography,
 } from '@mui/material'
 
@@ -8,28 +9,44 @@ import { HERO } from './content'
 
 
 const sectionStyles = {
-  backgroundPosition: 'center center',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  m: -1,
+  // backgroundImage: 'url(/backgrounds/mock_hero.jpg)',
+  // backgroundPosition: 'center center',
+  // backgroundRepeat: 'no-repeat',
+  // backgroundSize: 'cover',
+  // m: -1,
+  // pl: {
+  //   lg: 12
+  // },
+  // pr: {
+  //   lg: 60,
+  //   xl: 116,
+  // },
   px: {
     xs: 4,  // 0px
     sm: 15, // 600px
     md: 30, // 900px
     lg: 46, // 1200px
-    xl: 50, // 1536px
+    xl: 25, // 1536px
   },
+  // py: {
+  //   xs: 10,  // 0px
+  //   sm: 15, // 600px
+  //   md: 20, // 900px
+  //   lg: 20, // 1200px
+  //   xl: 30, // 1536px
+  // },
 }
 
 
 const HeroSection = () => (
-  <Box
+  <Container
     id="main"
     component="section"
     display="flex"
     justifyContent="center"
     alignItems="center"
     minHeight="100vh"
+    fixed
     sx={sectionStyles}
   >
     <Box>
@@ -47,7 +64,7 @@ const HeroSection = () => (
         {HERO.body}
       </Typography>
     </Box>
-  </Box>
+  </Container>
 )
 
 export default HeroSection
