@@ -2,13 +2,7 @@ import { useState, useEffect } from 'react'
 import {
   CardMedia,
   ImageListItem,
-  ImageListItemBar,
-  IconButton,
 } from '@mui/material'
-
-import {
-  Info as InfoIcon,
-} from '@mui/icons-material'
 
 import { getCard } from 'data/cards'
 
@@ -45,19 +39,6 @@ function CardTile({ owned, code, number, imageSize = 'normal' }: any) {
         sx={{
           ...ownedStyles,
         }}
-      />
-
-      <ImageListItemBar
-        title={name}
-        subtitle={`Illustration by ${artist}`}
-        actionIcon={
-          <IconButton
-            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-            aria-label={`Information about ${name}. Illustration by ${artist}.`}
-          >
-            <InfoIcon />
-          </IconButton>
-        }
       />
     </ImageListItem>
   )
