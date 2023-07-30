@@ -25,7 +25,7 @@ const Event = ({ title, date, description, cards }: any) => {
       <TimelineOppositeContent>
         <h3>{title}</h3>
         <p>{date}</p>
-        <p>{description}</p>
+        {description.map((line) => <p>{line}</p>)}
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot />
