@@ -14,21 +14,6 @@ const sectionStyles = {
   // backgroundPosition: 'center center',
   // backgroundRepeat: 'no-repeat',
   // backgroundSize: 'cover',
-  // m: -1,
-  // pl: {
-  //   lg: 12
-  // },
-  // pr: {
-  //   lg: 60,
-  //   xl: 116,
-  // },
-  // py: {
-  //   xs: 10,  // 0px
-  //   sm: 15, // 600px
-  //   md: 20, // 900px
-  //   lg: 20, // 1200px
-  //   xl: 30, // 1536px
-  // },
   ...defaultSectionStyles,
 }
 
@@ -37,10 +22,6 @@ const HeroSection = () => (
   <Container
     id="main"
     component="section"
-    display="flex"
-    justifyContent="center"
-    alignItems="center"
-    minHeight="100vh"
     fixed
     sx={sectionStyles}
   >
