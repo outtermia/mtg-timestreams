@@ -32,7 +32,7 @@ const Event = ({ title, date, description, cards }: any) => {
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <ImageList sx={{ width: 500 }}>
+        <ImageList>
           {CardTiles}
         </ImageList>
       </TimelineContent>
