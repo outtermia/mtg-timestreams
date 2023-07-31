@@ -18,7 +18,7 @@ import CardTile from './CardTile'
 
 
 const Event = ({ title, date, description, cards }: any) => {
-  const CardTiles = cards.map((card: any) => <CardTile {...card} />)
+  const CardTiles = cards.map((card: any) => <CardTile key={`${card.code}-${card.number}`} {...card} />)
 
   return (
     <TimelineItem>
@@ -34,14 +34,14 @@ const Event = ({ title, date, description, cards }: any) => {
       <TimelineContent>
         <h3>{title}</h3>
         <p>{date}</p>
-        {description.map((line) => <p>{line}</p>)}
+        {description.map((line, index) => <p key={`${date}-${index}`} >{line}</p>)}
       </TimelineContent>
     </TimelineItem>
   )
 }
 
 function TimelineSection () {
-  const events = EVENTS.map((event) => <Event {...event} />)
+  const events = EVENTS.map((event) => <Event key={`event-${event.date}`} {...event} />)
 
   return (
     <Container
