@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import theme from 'lib/theme'
 
 import HeroSection from 'HeroSection'
+import AboutSection from 'AboutSection'
 import TimelineSection from 'TimelineSection'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <HeroSection />
+      <AboutSection />
 
       <TimelineSection />
     </ThemeProvider>
