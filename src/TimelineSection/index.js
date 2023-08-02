@@ -1,3 +1,4 @@
+import useMediaQuery from '@mui/material/useMediaQuery'
 import {
   Container,
   ImageList,
@@ -17,13 +18,13 @@ import { EVENTS } from 'data/mock'
 import CardTile from './CardTile'
 
 
-const Event = ({ title, date, description, cards }: any) => {
+const Event = ({ cards, cols, date, description, title }: any) => {
   const CardTiles = cards.map((card: any) => <CardTile key={`${card.code}-${card.number}`} {...card} />)
 
   return (
     <TimelineItem>
       <TimelineOppositeContent>
-        <ImageList>
+        <ImageList cols={cols}>
           {CardTiles}
         </ImageList>
       </TimelineOppositeContent>
@@ -41,7 +42,12 @@ const Event = ({ title, date, description, cards }: any) => {
 }
 
 function TimelineSection () {
-  const events = EVENTS.map((event) => <Event key={`event-${event.date}`} {...event} />)
+  const matches = useMediaQuery('(min-width:900px)')
+  const eventColsNum = matches ? 3 : 1
+
+  const events = EVENTS.map(
+    (event) => <Event key={`event-${event.date}`} cols={eventColsNum} {...event} />
+  )
 
   return (
     <Container
